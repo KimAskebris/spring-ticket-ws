@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.kimper.com/ticket"
+           targetNamespace="http://www.kimper.com/ticket"
+           elementFormDefault="qualified">
+
+    <xs:element name="ticketRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="departure" type="xs:string"/>
+                <xs:element name="destination" type="xs:string"/>
+                <xs:element name="date" type="xs:string"/>
+            </xs:sequence>           
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ticketResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="price" type="xs:int" minOccurs="0"/>
+                <xs:element name="error" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
